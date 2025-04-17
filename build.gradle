@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.tatayless.sleepmanager'
-version = '0.1-SAMPLE'
+version = '1.0.0-RELEASE'
 description = 'Sleep Manager, for managing sleep in your SMP worlds!'
 
 repositories {

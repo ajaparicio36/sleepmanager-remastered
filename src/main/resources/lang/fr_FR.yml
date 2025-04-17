@@ -1,0 +1,44 @@
+# French language file for SleepManager
+# Uses MiniMessage format: https://docs.adventure.kyori.net/minimessage/format.html
+
+# Command messages
+commands:
+  no_permission: "<red>Vous n'avez pas la permission d'utiliser cette commande !</red>"
+  player_only: "<red>Cette commande ne peut être utilisée que par les joueurs !</red>"
+  unknown_command: "<red>Commande inconnue. Utilisez /sleepmanager pour obtenir de l'aide.</red>"
+  help_header: "<gold>===== <yellow>Aide Sleep Manager</yellow> =====</gold>"
+  help_format: "<yellow>/{command}</yellow> <gray>- {description}</gray>"
+  help_footer: "<gold>================================</gold>"
+  version: "<yellow>Version de SleepManager : <green>{version}</green></yellow>"
+  world_not_found: "<red>Monde '{world}' introuvable !</red>"
+  world_enabled: "<green>Vote pour dormir activé pour le monde '{world}'.</green>"
+  world_disabled: "<red>Vote pour dormir désactivé pour le monde '{world}'.</red>"
+  all_worlds_enabled: "<green>Vote pour dormir activé pour tous les mondes.</green>"
+  all_worlds_disabled: "<red>Vote pour dormir désactivé pour tous les mondes.</red>"
+
+# Voting messages
+voting:
+  disabled_world: "<red>Le vote pour dormir est désactivé dans ce monde.</red>"
+  invalid_world: "<red>Le vote pour dormir n'est pas disponible dans cette dimension.</red>"
+  not_night_time: "<red>Ce n'est pas encore la nuit.</red>"
+  already_active: "<red>Un vote est déjà en cours.</red>"
+  single_player_pass: "<green>Vous êtes seul dans ce monde. La nuit sera passée lorsque vous dormirez.</green>"
+  cooldown: "<red>Veuillez attendre {time} secondes avant de lancer un nouveau vote.</red>"
+  no_active_vote: "<red>Il n'y a pas de vote actif dans ce monde.</red>"
+  voted_yes: "<green>Vous avez voté OUI.</green>"
+  voted_no: "<red>Vous avez voté NON.</red>"
+  already_voted: "<gray>Vous avez déjà voté. Votre vote a été mis à jour.</gray>"
+  passed: "<green>Vote réussi ! <gray>({yes} OUI / {no} NON)</gray></green>\n<yellow>Le prochain joueur qui dormira passera la nuit.</yellow>"
+  failed: "<red>Vote échoué ! <gray>({yes} OUI / {no} NON)</gray></red>\n<yellow>Utilisez /sleepmanager revote pour réessayer.</yellow>"
+
+# Sleep messages
+sleep:
+  night_skipped: "<gold>☀ <yellow>{player}</yellow> a passé la nuit ! Levez-vous !</gold>"
+  phantom_reset: "<gray>Le compteur d'apparition des phantoms a été réinitialisé pour tous les joueurs.</gray>"
+
+# Vote display
+vote:
+  header: "<gold>===== <yellow>Vote pour Dormir</yellow> =====</gold>\n<gray>{player} souhaite passer la nuit.</gray>"
+  yes_hover: "<green>Cliquez pour voter OUI</green>"
+  no_hover: "<red>Cliquez pour voter NON</red>"
+  footer: "<gray>Requis : {percentage}% votes OUI</gray>\n<gold>================================</gold>"

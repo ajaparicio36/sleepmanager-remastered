@@ -1,0 +1,29 @@
+name: SleepManager
+version: "${version}"
+main: com.tatayless.sleepmanager.SleepManager
+api-version: "1.21"
+description: "${description}"
+author: tatayless
+
+commands:
+  sleepmanager:
+    description: Main command for the SleepManager plugin
+    usage: /<command> [subcommand] [args]
+    aliases: [sm, sleep]
+
+permissions:
+  sleepmanager.version:
+    description: Allows access to check the plugin version
+    default: true
+
+  sleepmanager.vote:
+    description: Allows players to vote in sleep votes
+    default: true
+
+  sleepmanager.revote:
+    description: Allows players to start a revote
+    default: true
+
+  sleepmanager.toggle:
+    description: Allows toggling sleep voting for worlds
+    default: op
