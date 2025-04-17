@@ -1,0 +1,44 @@
+# English language file for SleepManager
+# Uses MiniMessage format: https://docs.adventure.kyori.net/minimessage/format.html
+
+# Command messages
+commands:
+  no_permission: "<red>You don't have permission to use this command!</red>"
+  player_only: "<red>This command can only be used by players!</red>"
+  unknown_command: "<red>Unknown command. Use /sleepmanager for help.</red>"
+  help_header: "<gold>===== <yellow>Sleep Manager Help</yellow> =====</gold>"
+  help_format: "<yellow>/{command}</yellow> <gray>- {description}</gray>"
+  help_footer: "<gold>================================</gold>"
+  version: "<yellow>SleepManager version: <green>{version}</green></yellow>"
+  world_not_found: "<red>World '{world}' not found!</red>"
+  world_enabled: "<green>Sleep voting enabled for world '{world}'.</green>"
+  world_disabled: "<red>Sleep voting disabled for world '{world}'.</red>"
+  all_worlds_enabled: "<green>Sleep voting enabled for all worlds.</green>"
+  all_worlds_disabled: "<red>Sleep voting disabled for all worlds.</red>"
+
+# Voting messages
+voting:
+  disabled_world: "<red>Sleep voting is disabled in this world.</red>"
+  invalid_world: "<red>Sleep voting is not available in this dimension.</red>"
+  not_night_time: "<red>It's not night time yet.</red>"
+  already_active: "<red>A sleep vote is already in progress.</red>"
+  single_player_pass: "<green>You are alone in this world. The night will be skipped when you sleep.</green>"
+  cooldown: "<red>Please wait {time} seconds before starting a new vote.</red>"
+  no_active_vote: "<red>There is no active sleep vote in this world.</red>"
+  voted_yes: "<green>You voted YES.</green>"
+  voted_no: "<red>You voted NO.</red>"
+  already_voted: "<gray>You have already voted. Your vote has been updated.</gray>"
+  passed: "<green>Vote passed! <gray>({yes} YES / {no} NO)</gray></green>\n<yellow>Next player to sleep will skip the night.</yellow>"
+  failed: "<red>Vote failed! <gray>({yes} YES / {no} NO)</gray></red>\n<yellow>Use /sleepmanager revote to try again.</yellow>"
+
+# Sleep messages
+sleep:
+  night_skipped: "<gold>☀ <yellow>{player}</yellow> skipped the night! Rise and shine!</gold>"
+  phantom_reset: "<gray>Phantom spawn timer has been reset for all players.</gray>"
+
+# Vote display
+vote:
+  header: "<gold>===== <yellow>Sleep Vote</yellow> =====</gold>\n<gray>{player} wants to skip the night.</gray>"
+  yes_hover: "<green>Click to vote YES</green>"
+  no_hover: "<red>Click to vote NO</red>"
+  footer: "<gray>Required: {percentage}% YES votes</gray>\n<gold>================================</gold>"
