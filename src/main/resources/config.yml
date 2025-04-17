@@ -1,0 +1,26 @@
+# SleepManager Configuration
+# Controls the behavior of the sleep voting system
+
+# Language setting (files located in the lang/ folder)
+language: en_US
+
+# Voting settings
+voting:
+  # Percentage of players required to vote YES for the vote to pass (0-100)
+  required_percentage: 50
+
+  # Duration in seconds that a vote will remain active
+  duration_seconds: 30
+
+  # Cooldown in seconds before another vote can be triggered using /sleepmanager revote
+  revote_cooldown_seconds: 60
+
+# World-specific settings
+# By default, all worlds have sleep voting enabled
+# Individual worlds will be automatically added here when toggled with /sleepmanager toggle
+worlds:
+  # Example format:
+  # world:
+  #   enabled: true
+  # world_nether:
+  #   enabled: false
