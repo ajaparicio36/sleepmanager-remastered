@@ -28,17 +28,16 @@ public class PlayerBedEventListener implements Listener {
             return;
         }
 
-        // If no vote in progress or passed, start one
-        if (!plugin.getVoteManager().hasActiveVote(player.getWorld())) {
-            plugin.getVoteManager().startVote(player);
-            return;
-        }
-
         // If sleep vote was successful, handle sleep action
         if (plugin.getVoteManager().handleSleep(player)) {
             // Night was skipped, cancel the normal sleep behavior
             event.setCancelled(true);
+            // Force player to wake up immediately after the night is skipped
+            plugin.getServer().getScheduler().runTask(plugin, () -> player.wakeup(true));
+            return;
         }
+
+        // If no vote in progress, startVote was already called in handleSleep
     }
 
     // Handle deep sleep separately - this fires after player sleeps for a short
