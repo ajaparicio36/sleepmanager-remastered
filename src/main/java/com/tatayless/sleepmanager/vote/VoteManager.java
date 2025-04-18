@@ -116,8 +116,11 @@ public class VoteManager {
         }
 
         if (passed) {
-            // Wait for someone to sleep
+            // Mark the vote as passed so the next sleep attempt will succeed
             session.setVotePassed(true);
+
+            // Put the session back in activeVotes so handleSleep can find it
+            activeVotes.put(worldId, session);
         }
     }
 
@@ -139,6 +142,12 @@ public class VoteManager {
         // Clear phantom spawn timer for all players in the world
         for (Player worldPlayer : world.getPlayers()) {
             worldPlayer.setStatistic(org.bukkit.Statistic.TIME_SINCE_REST, 0);
+        }
+
+        // Send phantom reset message to all players
+        Component phantomMessage = plugin.getLanguageManager().getComponent("sleep.phantom_reset");
+        for (Player worldPlayer : world.getPlayers()) {
+            worldPlayer.sendMessage(phantomMessage);
         }
 
         // Skip night (only if doWeatherCycle is true)
@@ -187,6 +196,7 @@ public class VoteManager {
 
         // Check if vote should pass early
         if (session.shouldPassEarly()) {
+            // End vote but don't remove the session completely yet
             endVote(worldId);
         }
 
@@ -230,5 +240,6 @@ public class VoteManager {
 
     public boolean hasActiveVote(World world) {
         return activeVotes.containsKey(world.getUID());
+
     }
 }
